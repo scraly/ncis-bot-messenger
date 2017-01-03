@@ -85,7 +85,8 @@ function sendTextMessage(sender, text) {
 //TODO Send Gibbs rules
 function sendGibbsRules(sender) {
     var rules = ["Good!", "Great!", "Awesome!", "Super!", "Nice!"];
-    var messageText = rules[Math.floor(Math.random() * rules.length)];
+    //var messageText = rules[Math.floor(Math.random() * rules.length)];
+    var messageText = { text:sender };
     request({
         url: 'https://graph.facebook.com/v2.7/me/messages',
         qs: {access_token:token},
