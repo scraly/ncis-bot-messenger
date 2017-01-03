@@ -4,6 +4,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
 var app = express();
+var path = require('path');
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -24,6 +25,11 @@ app.get('/webhook/', function (req, res) {
 		res.send(req.query['hub.challenge'])
 	}
 	res.send('Erreur, mauvais token');
+});
+
+// Index politique-confidentialite-fb.html
+app.get('/politique-confidentialite-fb.html', function (req, res) {
+	res.sendFile(path.join(__dirname + '/politique-confidentialite-fb.html'));
 });
 
 // Spin up the server
