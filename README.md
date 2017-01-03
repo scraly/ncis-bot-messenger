@@ -16,9 +16,9 @@ Ce bot messenger envoie une règle de gibbs (de la série NCIS) lorsque l'on env
 
 #### Verify your installation
 
-```$ heroku --version
+```$ heroku --version```
 
-heroku-cli/5.6.10-249d061 (linux-386) go1.7.4```
+```heroku-cli/5.6.10-249d061 (linux-386) go1.7.4```
 
 #### Clone this repo
 
