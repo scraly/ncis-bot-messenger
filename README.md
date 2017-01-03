@@ -47,4 +47,4 @@ Le bot messenger doit être relié à une page Facebook donc :
 
 ### Preview
 
-![alt text](https://sheltered-lowlands-96453.herokuapp.com/images/ncis-bot-messenger-result.png "NCIS bot messenger preview")
+![alt text](https://github.com/scraly/ncis-bot-messenger/blob/master/images/ncis-bot-messenger-result.png "NCIS bot messenger preview")
