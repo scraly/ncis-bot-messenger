@@ -42,11 +42,12 @@ for (var i = 0; i < messaging_events.length; i++) {
 	var sender = event.sender.id;
 	if (event.message && event.message.text) {
 		var text = event.message.text;
-            if (text === 'Cards') {
-                sendCardMessage(sender);
+            if (text === 'gibbs') {
+                //sendCardMessage(sender);
+		    sendGibbsRules(sender);
 	            continue;
 	        }
-			sendTextMessage(sender, "Message reçu : " + text.substring(0, 200));
+			//sendTextMessage(sender, "Message reçu : " + text.substring(0, 200));
 		}		
 		//Reagir au click sur un bouton d'une card
 		if (event.postback) {
@@ -60,8 +61,6 @@ for (var i = 0; i < messaging_events.length; i++) {
 		
 	res.sendStatus(200);
 });
-
-//TODO lorsque l'utilisateur saisit "ncis" ou "gibbs rule" alors envoyer en random une des regles de gibbs via fb messenger
 
 //Send messages
 function sendTextMessage(sender, text) {
@@ -81,6 +80,27 @@ function sendTextMessage(sender, text) {
 	            console.log('Erreur: ', response.body.error);
 	        }
 	    });
+}
+
+//TODO Send Gibbs rules
+function sendGibbsRules(sender) {
+    var rules = ["Good!", "Great!", "Awesome!", "Super!", "Nice!"];
+    var messageText = rules[Math.floor(Math.random() * rules.length)];
+    request({
+        url: 'https://graph.facebook.com/v2.7/me/messages',
+        qs: {access_token:token},
+        method: 'POST',
+        json: {
+            recipient: {id:sender},
+            message: messageText,
+                }
+            }, function(error, response, body) {
+                if (error) {
+                    console.log('Une erreur est survenue : ', error);
+                } else if (response.body.error) {
+                    console.log('Erreur: ', response.body.error);
+                }
+            });
 }
 
 //Send card messages
