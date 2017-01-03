@@ -13,11 +13,11 @@ Ce bot messenger envoie une règle de gibbs (de la série NCIS) lorsque l'on env
 
 #### Verify your installation
 
-```$ heroku --version```
-```heroku-cli/5.6.10-249d061 (linux-386) go1.7.4```
+```$ heroku --version
+heroku-cli/5.6.10-249d061 (linux-386) go1.7.4```
 
-```$ node --version```
-```v5.0.0```
+```$ node --version
+v5.0.0```
 
 ```$ sudo npm install npm -g```
 
@@ -40,6 +40,6 @@ Le bot messenger doit être relié à une page Facebook donc :
 
 #### Relier le bot à la page
 
-```$ curl -X POST "https://graph.facebook.com/v2.7/me/subscribed_apps?access_token=<PAGE_ACCESS_TOKEN>"
+```$ curl -X POST "https://graph.facebook.com/v2.7/me/subscribed_apps?access_token=<PAGE_ACCESS_TOKEN>"```
 
 
