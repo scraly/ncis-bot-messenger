@@ -45,4 +45,6 @@ Le bot messenger doit être relié à une page Facebook donc :
 
 ```$ curl -X POST "https://graph.facebook.com/v2.7/me/subscribed_apps?access_token=<PAGE_ACCESS_TOKEN>"```
 
+### Preview
 
+![alt text](https://sheltered-lowlands-96453.herokuapp.com/images/ncis-bot-messenger-result.png "NCIS bot messenger preview")

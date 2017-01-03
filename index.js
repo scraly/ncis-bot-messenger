@@ -32,6 +32,11 @@ app.get('/politique-confidentialite-fb.html', function (req, res) {
 	res.sendFile(path.join(__dirname + '/politique-confidentialite-fb.html'));
 });
 
+// Index image
+app.get('/images/ncis-bot-messenger-result.png', function (req, res) {
+        res.sendFile(path.join(__dirname + '/images/ncis-bot-messenger-result.png'));
+});
+
 // Spin up the server
 app.listen(app.get('port'), function() {
 	console.log('running on port', app.get('port'));
