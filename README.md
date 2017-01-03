@@ -19,11 +19,6 @@ Ce bot messenger envoie une règle de gibbs (de la série NCIS) lorsque l'on env
 ```$ heroku --version
 heroku-cli/5.6.10-249d061 (linux-386) go1.7.4```
 
-```$ node --version
-v5.0.0```
-
-```$ sudo npm install npm -g```
-
 #### Clone this repo
 ```git clone https://github.com/scraly/ncis-bot-messenger.git```
 
@@ -37,8 +32,11 @@ Le bot messenger doit être relié à une page Facebook donc :
 
 #### Commit and Push to heroku instance
 ```$ git add .```
+
 ```$ git commit -m "init"```
+
 ```$ heroku create```
+
 ```$ git push heroku master```
 
 #### Relier le bot à la page
