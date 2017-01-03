@@ -82,9 +82,44 @@ function sendTextMessage(sender, text) {
 	    });
 }
 
-//TODO Send Gibbs rules
+//Send Gibbs rules in random
 function sendGibbsRules(sender) {
-    var rules = ["Good!", "Great!", "Awesome!", "Super!", "Nice!"];
+    var rules = [
+	"1. Ne jamais laisser deux suspects ensemble dans la même pièce.", 
+	"1bis. Ne jamais trahir son partenaire.", 
+	"2. Toujours porter des gants sur une scène de crime.",
+	"3. Ne croyez jamais ce que l'on vous dit, toujours vérifier.",
+	"3bis. Ne jamais être injoignable.",
+	"4. La meilleure façon de garder un secret est de ne le révéler à personne.",
+	"5. Ne pas gâcher le talent.",
+	"6. Ne jamais dire qu'on est désolé. C'est un signe de faiblesse.",
+	"7. Toujours être précis lorsque vous mentez.",
+	"8. Ne jamais rien prendre pour acquis.",
+	"9. Toujours avoir un couteau sur soi.",
+	"10. Ne jamais s'impliquer personnellement dans une enquête.",
+	"11. Quand le boulot est fini, on s'en va.",
+	"12. Ne jamais fréquenter un collègue.",
+	"13. Ne jamais impliquer un avocat.",
+	"13.bis Les règles sont faites pour être enfreintes.",
+	"15. Toujours travailler en équipe.",
+	"16. Si quelqu'un pense avoir la mainmise, brise-le.",
+	"17. Ne jamais frapper un marine.",
+	"18. Il vaut mieux rechercher le pardon que demander la permission.",
+	"22. Ne jamais interrompre Gibbs pendant un interrogatoire.",
+	"23. Ne jamais jouer avec le café d'un Marine si vous tenez à la vie.",
+	"26. Ne jamais laisser quelqu'un vous manipuler.",
+	"27. Il y a 2 méthodes pour une filature. La 1ère : ils ne vous remarquent pas. La 2ème : ils ne remarquent que vous.",
+	"35. Toujours observer ceux qui observent.",
+	"36. Si vous avez le sentiment qu'on vous manipule, c'est probablement le cas.",
+	"38. Ton affaire, ton enquête.",
+	"39. Les coincidences, ça n'existe pas.",
+	"40. Si tu as le sentiment qu'on cherche à te coincer, c'est que c'est le cas.",
+	"42. Ne jamais accepter d'excuses de quelqu'un qui vient de vous trahir.",
+	"44. Les priorités d'abord. Cacher les femmes et les enfants.",
+	"45. Toujours nettoyer la pagaille qu'on a semée.",
+	"51. Parfois, tu as tort.",
+	"69. Ne jamais croire une femme qui ne fait pas confiance à son homme."
+    ];
     var text = rules[Math.floor(Math.random() * rules.length)];
     var messageText = { text:text };
     request({
