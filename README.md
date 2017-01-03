@@ -24,10 +24,15 @@ heroku-cli/5.6.10-249d061 (linux-386) go1.7.4```
 
 #### Facebook Page
 Le bot messenger doit être relié à une page Facebook donc :
+
 1. Go to https://developers.facebook.com/apps pour créer votre application Facebook
+
 2. Activer messenger
+
 3. Webhooks
+
 4. Relier l'app à la page et générer un token
+
 5. Remplacer le token dans index.js
 
 #### Commit and Push to heroku instance
